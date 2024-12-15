@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+:root{
+    --white-clr:#fff;
+    --black-clr:#000;
+    --purple-clr:#8113ff;
+
+}
+body{
+    background: var(--purple-clr);
+}
+main{
+    min-height: 100vh;
+    background: var(--black-clr);
+    position: relative;
+    isolation: isolate;
+}
+
+main::before{
+    content:'' ;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--purple-clr);
+    width: 35rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(200px);
+}
+
+
+main::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:linear-gradient(
+        rgb(255, 255, 255,0.1) 1px,
+        transparent 1px
+    ),
+     linear-gradient(to right,
+        rgba(255, 255, 255, 0.15) 1px,
+        transparent 1px
+    );
+    background-size: 70px 70px;
+    z-index:-2 ;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content:space-between ;
+    height:14vh ;
+    width: 85%;
+  
+    margin: auto;
+}
+
+.hero-section{ 
+    min-height: calc(100vh- 14vh);
+    width:85%;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+    
+    text-align: center;
+    align-items: center;
+    position: relative;
+
+
+}
+h1{
+    color: var(--white-clr);
+    font-size: 20rem;
+    font-family: "Corinthia", cursive;
+    font-weight: 400;
+ 
+    position: relative;
+
+}
+h1::after{
+    content: 'Full stack Developer';
+    position:absolute ;
+    bottom: 17%;
+    right: -15%;
+    font-size: 1.4rem;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .08rem;
+
+}
+img{
+    width: 42rem;
+    position: absolute;
+    top: -10%;
+    
+    bottom: 0;
+}
+p{
+    font-size: .95rem;
+    position: absolute;
+    top: 15%;
+    left: 0;
+    color: var(--white-clr);
+    max-width: 370px;
+    letter-spacing: .06rem;
+}
+
+
+.navlist{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.navlinks{
+    color: white;
+    border: .1rem solid #8113ff6e;
+    padding: .4rem 1rem;
+    border-radius: 5rem;
+    transition: .2s ease-in-out;
+
+}
+.navlinks{
+    background: var(--purple-clr);
+}
+.nav-btn{
+    padding: .6rem 1.4rem;
+    background: var(--purple-clr);
+    font-size: 1rem;
+    color: var(--white-clr);
+    border-radius: 5rem;
+}
+.social-icons{
+     display: flex;
+     flex-direction: column;
+     gap: 1rem;
+     position: absolute;
+     left: 45px;
+     bottom: 25px;
+}
+.icon{
+    width: 40px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--white-clr);
+    text-align: center;
+    line-height: 40px;
+    transition: .5s ease-in-out;
+}
+.fa-brands{
+color: var(--purple-clr);
+font-size: 1.2rem;
+transition: .5s ease-in-out;
+}
+.fa-algolia{
+    font-size: 2.5rem;
+    color: var(--purple-clr);
+}
+.icon:hover{
+    transform:translateX(30%) ;
+    background: var(--purple-clr);
+
+
+}
+.icon:hover .fa-brands{
+    color: white;
+
+}
+.fa-bars{
+    font-size: 1.6rem;
+    color: var(--white-clr);
+}
+
+.hamburger{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and ( max-width:680px){
+    .navlist{
+       flex-direction: column;
+       position: absolute;
+       top: -100%;
+       left: 50%;
+       transform: translateX(-50%);
+       background:rgba(0, 0, 0, 0.45);
+       width: 23rem;
+       padding-block: 3rem;
+       z-index: 4;
+       gap: 3rem;
+       border-radius: 2rem;
+       backdrop-filter: blur(15px);
+       transition: .6s ease-in-out ;
+    }
+    .navlist-active{
+        top: 15%;
+    }
+    .hamburger{
+        display: block;
+    }
+    .fa-algolia{
+        font-size: 2rem;
+    }
+    img{
+        width: 30rem;
+    }
+    main::before{
+        width: 25rem;
+        aspect-ratio: 1;
+    }
+    h1{
+        font-size: 5rem;
+    }
+    h1::after{
+        font-size: .95rem;
+        bottom: -80%;
+    }
+    .hero-section{
+        align-items: flex-start;
+    }
+    p{
+        font-size: .9rem;
+    }
+}
+
+
