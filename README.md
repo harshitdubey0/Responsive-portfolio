@@ -13,7 +13,7 @@ This repository contains the source code for a **portfolio website** designed to
 - **Modern Aesthetics**: Uses gradients, blur effects, and clean typography for a professional look.
 - **Social Media Integration**: Links to Facebook, Instagram, Twitter, and Behance.
 - **Customizable Theme**: Easily updateable through the use of CSS variables.
-- **Lightweight**: Minimal dependencies for faster load times.
+- **Lightweight**: Minimal dependencies for faster load time.
 
 ## Technologies Used
 - **HTML5**: Markup for structuring the webpage.
